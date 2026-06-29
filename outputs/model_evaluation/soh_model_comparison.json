@@ -1,0 +1,69 @@
+{
+  "best_model": "RandomForestRegressor",
+  "best_metrics": {
+    "mae": 0.5348,
+    "rmse": 0.7761,
+    "r2": 0.9946,
+    "mape": 0.6617,
+    "residual_std": 0.776
+  },
+  "models": {
+    "RandomForestRegressor": {
+      "mae": 0.5348,
+      "rmse": 0.7761,
+      "r2": 0.9946,
+      "mape": 0.6617,
+      "residual_std": 0.776
+    },
+    "SupportVectorRegression": {
+      "mae": 0.6487,
+      "rmse": 0.8919,
+      "r2": 0.9929,
+      "mape": 0.8095,
+      "residual_std": 0.8896
+    },
+    "GradientBoostingRegressor": {
+      "mae": 0.6524,
+      "rmse": 0.9097,
+      "r2": 0.9926,
+      "mape": 0.8131,
+      "residual_std": 0.9096
+    },
+    "MLPRegressor": {
+      "mae": 0.888,
+      "rmse": 1.2145,
+      "r2": 0.9869,
+      "mape": 1.0899,
+      "residual_std": 1.2078
+    },
+    "LinearRegression": {
+      "mae": 1.3367,
+      "rmse": 1.7185,
+      "r2": 0.9737,
+      "mape": 1.6764,
+      "residual_std": 1.7173
+    }
+  },
+  "feature_columns": [
+    "cycle_count",
+    "temperature_c",
+    "internal_resistance_mohm",
+    "voltage",
+    "battery_type"
+  ],
+  "dataset": {
+    "selected_dataset": "NASA PCoE Li-ion Battery Aging Dataset",
+    "local_table": "data/nasa_health/battery_health_lookup.csv",
+    "source_url": "https://phm-datasets.s3.amazonaws.com/NASA/5.+Battery+Data+Set.zip",
+    "rows_total": 636,
+    "rows_train": 508,
+    "rows_test": 128,
+    "battery_sources": [
+      "B0005",
+      "B0006",
+      "B0007",
+      "B0018"
+    ],
+    "battery_type_note": "NASA rows are cylindrical cells; pouch and prismatic API inputs are accepted but require future aging data for type-specific calibration."
+  }
+}

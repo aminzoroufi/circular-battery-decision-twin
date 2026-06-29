@@ -1,0 +1,272 @@
+{
+  "generated_at": "2026-06-24T17:23:12.165065+00:00",
+  "dataset": {
+    "path": "data/images",
+    "total_images": 90,
+    "classes": [
+      "cylindrical",
+      "pouch",
+      "prismatic"
+    ],
+    "class_counts": {
+      "cylindrical": 30,
+      "pouch": 30,
+      "prismatic": 30
+    },
+    "label_source": "folder names are used only as ground-truth labels during evaluation; runtime prediction uses image pixels only."
+  },
+  "selected_model": {
+    "name": "linear_svm_hog",
+    "feature_set": "hog",
+    "trust_percentage": 98.89,
+    "selection_rule": "highest mean 5-fold cross-validation accuracy, then macro F1 and holdout metrics as tie-breakers",
+    "why_selected": "Shape-focused classifier using HOG gradients and a linear support vector machine.",
+    "model_path": "backend/trained_models/battery_type_classifier.joblib"
+  },
+  "results": [
+    {
+      "name": "linear_svm_hog",
+      "feature_set": "hog",
+      "rationale": "Shape-focused classifier using HOG gradients and a linear support vector machine.",
+      "cv_accuracy_mean": 0.9889,
+      "cv_accuracy_std": 0.0222,
+      "cv_macro_f1_mean": 0.9888,
+      "cv_macro_f1_std": 0.0224,
+      "holdout_accuracy": 0.963,
+      "holdout_macro_f1": 0.9628,
+      "confusion_matrix": [
+        [
+          8,
+          0,
+          1
+        ],
+        [
+          0,
+          9,
+          0
+        ],
+        [
+          0,
+          0,
+          9
+        ]
+      ],
+      "classification_report": {
+        "cylindrical": {
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.9411764705882353,
+          "support": 9.0
+        },
+        "pouch": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 9.0
+        },
+        "prismatic": {
+          "precision": 0.9,
+          "recall": 1.0,
+          "f1-score": 0.9473684210526315,
+          "support": 9.0
+        },
+        "accuracy": 0.9629629629629629,
+        "macro avg": {
+          "precision": 0.9666666666666667,
+          "recall": 0.9629629629629629,
+          "f1-score": 0.9628482972136223,
+          "support": 27.0
+        },
+        "weighted avg": {
+          "precision": 0.9666666666666667,
+          "recall": 0.9629629629629629,
+          "f1-score": 0.9628482972136223,
+          "support": 27.0
+        }
+      }
+    },
+    {
+      "name": "logistic_regression_color_shape",
+      "feature_set": "color_shape",
+      "rationale": "Fast interpretable baseline using color histograms, aspect ratio, and edge density.",
+      "cv_accuracy_mean": 0.9667,
+      "cv_accuracy_std": 0.0444,
+      "cv_macro_f1_mean": 0.966,
+      "cv_macro_f1_std": 0.0456,
+      "holdout_accuracy": 0.963,
+      "holdout_macro_f1": 0.9628,
+      "confusion_matrix": [
+        [
+          9,
+          0,
+          0
+        ],
+        [
+          1,
+          8,
+          0
+        ],
+        [
+          0,
+          0,
+          9
+        ]
+      ],
+      "classification_report": {
+        "cylindrical": {
+          "precision": 0.9,
+          "recall": 1.0,
+          "f1-score": 0.9473684210526315,
+          "support": 9.0
+        },
+        "pouch": {
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.9411764705882353,
+          "support": 9.0
+        },
+        "prismatic": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 9.0
+        },
+        "accuracy": 0.9629629629629629,
+        "macro avg": {
+          "precision": 0.9666666666666667,
+          "recall": 0.9629629629629629,
+          "f1-score": 0.9628482972136223,
+          "support": 27.0
+        },
+        "weighted avg": {
+          "precision": 0.9666666666666667,
+          "recall": 0.9629629629629629,
+          "f1-score": 0.9628482972136223,
+          "support": 27.0
+        }
+      }
+    },
+    {
+      "name": "rbf_svm_hybrid",
+      "feature_set": "hybrid",
+      "rationale": "Selected candidate for non-linear boundaries using both HOG and color/shape features.",
+      "cv_accuracy_mean": 0.9556,
+      "cv_accuracy_std": 0.0222,
+      "cv_macro_f1_mean": 0.9552,
+      "cv_macro_f1_std": 0.0224,
+      "holdout_accuracy": 0.963,
+      "holdout_macro_f1": 0.9628,
+      "confusion_matrix": [
+        [
+          8,
+          0,
+          1
+        ],
+        [
+          0,
+          9,
+          0
+        ],
+        [
+          0,
+          0,
+          9
+        ]
+      ],
+      "classification_report": {
+        "cylindrical": {
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.9411764705882353,
+          "support": 9.0
+        },
+        "pouch": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 9.0
+        },
+        "prismatic": {
+          "precision": 0.9,
+          "recall": 1.0,
+          "f1-score": 0.9473684210526315,
+          "support": 9.0
+        },
+        "accuracy": 0.9629629629629629,
+        "macro avg": {
+          "precision": 0.9666666666666667,
+          "recall": 0.9629629629629629,
+          "f1-score": 0.9628482972136223,
+          "support": 27.0
+        },
+        "weighted avg": {
+          "precision": 0.9666666666666667,
+          "recall": 0.9629629629629629,
+          "f1-score": 0.9628482972136223,
+          "support": 27.0
+        }
+      }
+    },
+    {
+      "name": "random_forest_color_shape",
+      "feature_set": "color_shape",
+      "rationale": "Non-linear baseline for handcrafted color and shape features.",
+      "cv_accuracy_mean": 0.9222,
+      "cv_accuracy_std": 0.0444,
+      "cv_macro_f1_mean": 0.9197,
+      "cv_macro_f1_std": 0.0487,
+      "holdout_accuracy": 0.8519,
+      "holdout_macro_f1": 0.8531,
+      "confusion_matrix": [
+        [
+          8,
+          0,
+          1
+        ],
+        [
+          0,
+          6,
+          3
+        ],
+        [
+          0,
+          0,
+          9
+        ]
+      ],
+      "classification_report": {
+        "cylindrical": {
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.9411764705882353,
+          "support": 9.0
+        },
+        "pouch": {
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.8,
+          "support": 9.0
+        },
+        "prismatic": {
+          "precision": 0.6923076923076923,
+          "recall": 1.0,
+          "f1-score": 0.8181818181818182,
+          "support": 9.0
+        },
+        "accuracy": 0.8518518518518519,
+        "macro avg": {
+          "precision": 0.8974358974358975,
+          "recall": 0.8518518518518517,
+          "f1-score": 0.8531194295900179,
+          "support": 27.0
+        },
+        "weighted avg": {
+          "precision": 0.8974358974358974,
+          "recall": 0.8518518518518519,
+          "f1-score": 0.8531194295900179,
+          "support": 27.0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+# macOS / editor noise
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Runtime outputs
+outputs/uploaded_images/
+outputs/latest_decision.json
+outputs/inspection_log.csv
+outputs/battery_passports.json
+
+# Large local dataset downloads
+data/raw/
+
+# Unity generated folders
+unity/BatteryReXControlTwin/Library/
+unity/BatteryReXControlTwin/Temp/
+unity/BatteryReXControlTwin/Obj/
+unity/BatteryReXControlTwin/Logs/
+unity/BatteryReXControlTwin/UserSettings/
+unity/BatteryReXControlTwin/Build/
+unity/BatteryReXControlTwin/Builds/
+unity/BatteryReXControlTwin/MemoryCaptures/
+
+# Unity / IDE generated files
+*.csproj
+*.sln
+*.user
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Local third-party source archives
+unity/BatteryReXControlTwin/Assets/ThirdParty/_downloads/
+unity/BatteryReXControlTwin/Assets/ThirdParty/_downloads.meta
