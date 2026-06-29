@@ -1,6 +1,6 @@
 """Project: Circular Battery Decision Twin
 Developer: Amin Zoroufi
-Contact: YOUR_EMAIL
+Contact: aminn.zoroufi@gmail.com
 """
 
 from __future__ import annotations
