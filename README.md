@@ -177,7 +177,7 @@ This repository is a completed local research prototype. The conveyor, robot, in
 
 ## License
 
-No open-source license is provided in this repository. Contact the author for reuse or collaboration permissions.
+This project is released under the MIT License. See `LICENSE` for details.
 
 Third-party assets and datasets keep their own licenses. See:
 
